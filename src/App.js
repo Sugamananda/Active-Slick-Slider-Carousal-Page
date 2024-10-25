@@ -1,25 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Card from "./Card";
+// import Slider from "react-slick";
+import bg from "./image/3491319.webp";
 
-function App() {
+
+function Swty() {
+  const styles = {
+    backgroundImage: `url(${bg})`,
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center',
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <section className='h-screen w-screen' style={styles}>
+          <div className='text-balance justify-center '>
+            <h1 className=' text-white font-bold text-center text-5xl pt-9'>Mountains Climbing</h1>
+            <h3 className='text-white text-center text-2xl pt-4 pb-40'>The word mount has many meanings, from a high hill to a way of attaching something.</h3>
+          </div>
+          <Card />
+    </section>
   );
 }
 
-export default App;
+export default Swty;
